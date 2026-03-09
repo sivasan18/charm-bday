@@ -876,8 +876,8 @@ a {
 
 .surprise-reveal {
     margin-top: 40px;
-    max-width: 620px;
-    animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    max-width: 800px;
+    animation: reveal-up 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .surprise-reveal.hidden {
@@ -887,7 +887,7 @@ a {
 @keyframes reveal-up {
     from {
         opacity: 0;
-        transform: translateY(30px) scale(0.95);
+        transform: translateY(40px) scale(0.98);
     }
 
     to {
@@ -896,41 +896,76 @@ a {
     }
 }
 
+.surprise-image-wrapper {
+    margin-bottom: 30px;
+    perspective: 1000px;
+}
+
+.surprise-note-img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(251, 191, 36, 0.2);
+    border: 2px solid rgba(251, 191, 36, 0.3);
+    animation: pop-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotateX(-20deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotateX(0deg);
+    }
+}
+
 .surprise-message {
     background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
-    padding: 40px;
+    padding: clamp(24px, 5vw, 40px);
     backdrop-filter: blur(20px);
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.surprise-emoji {
-    font-size: 3.5rem;
-    margin-bottom: 16px;
-}
-
-.surprise-message h3 {
-    font-family: var(--font-display);
-    font-size: 1.7rem;
-    background: linear-gradient(135deg, var(--neon-gold), var(--neon-pink));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 16px;
+.surprise-decoration {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1;
+    filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.4));
 }
 
 .surprise-message p {
     color: var(--text-secondary);
     line-height: 1.8;
-    font-size: 0.95rem;
-    margin-bottom: 12px;
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.surprise-caption-intro {
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 3vw, 1.5rem) !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, var(--neon-gold), var(--neon-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 24px !important;
 }
 
 .surprise-final {
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-weight: 700 !important;
     color: var(--neon-gold) !important;
-    font-size: 1.1rem !important;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem) !important;
+    margin-top: 30px;
 }
 
 /* ============================
