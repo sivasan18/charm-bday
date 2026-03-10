@@ -3,20 +3,20 @@
    ============================ */
 
 const ALL_IMAGES = [
+    'img/aim.png',
+    'img/black.png',
+    'img/charm.png',
+    'img/enjoy.png',
+    'img/inspire.png',
+    'img/petals.png',
     'img/priya 2.png',
     'img/priya 3.png',
     'img/priya 6.png',
-    'img/priya3.png',
+    'img/priya dream.png',
     'img/priya nurse .png',
-    'img/classroom.png',
-    'img/priya with raji.png',
-    'img/with frnds.png',
-    'img/with team.png',
-    'img/with akka ponnu.png',
-    'img/snap.jpeg',
-    'img/with raji.jpg.jpeg',
-    'img/aim.png',
-    'img/id card.png'
+    'img/priya police.png',
+    'img/priya3.png',
+    'img/to be.png'
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
